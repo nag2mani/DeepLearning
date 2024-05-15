@@ -5,8 +5,6 @@ import replicate
 import os
 from transformers import AutoTokenizer
 
-
-# Set assistant icon to Snowflake logo
 icons = {"assistant": "./Snowflake_Logomark_blue.svg", "user": "⛷️"}
 
 # App title
@@ -30,7 +28,7 @@ with st.sidebar:
 
 # Store LLM-generated responses
 if "messages" not in st.session_state.keys():
-    st.session_state.messages = [{"role": "assistant", "content": "Hi. I'm Arctic, a new, efficient, intelligent, and truly open language model created by Snowflake AI Research. Ask me anything."}]
+    st.session_state.messages = [{"role": "assistant", "content": "Hi. I'm Arctic created by Snowflake. Ask me anything."}]
 
 # Display or clear chat messages
 for message in st.session_state.messages:
