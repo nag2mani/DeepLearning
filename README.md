@@ -7,9 +7,9 @@ Welcome to the GenerativeAI GitHub repository! This project showcases various ap
 
 1. Snowflake Arctic Model
 
-2. Streamlit
+2. Streamlit Tutorials
 
-3. LangChain
+3. LangChain Tutorials
 
 4. Other Models..
 
