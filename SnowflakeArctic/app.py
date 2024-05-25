@@ -5,6 +5,11 @@ import replicate
 import os
 from transformers import AutoTokenizer
 
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
+REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
+
+
 icons = {"assistant": "./Snowflake_Logomark_blue.svg", "user": "⛷️"}
 
 # App title
@@ -13,13 +18,7 @@ st.set_page_config(page_title="Snowflake Arctic")
 # Replicate Credentials
 with st.sidebar:
     st.title('Snowflake Arctic')
-    if 'REPLICATE_API_TOKEN' in st.secrets:
-        replicate_api = st.secrets['REPLICATE_API_TOKEN']
-    else:
-        replicate_api = st.text_input('Enter Replicate API token:', type='password')
-        if not (replicate_api.startswith('r8_') and len(replicate_api)==40):
-            st.warning('Please enter your Replicate API token.', icon='⚠️')
-            st.markdown("Find your API Key")
+    replicate_api = REPLICATE_API_TOKEN
 
     os.environ['REPLICATE_API_TOKEN'] = replicate_api
     st.subheader("Adjust model parameters")
