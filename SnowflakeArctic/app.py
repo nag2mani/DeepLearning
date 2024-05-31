@@ -5,11 +5,6 @@ import replicate
 import os
 from transformers import AutoTokenizer
 
-from dotenv import load_dotenv, find_dotenv
-load_dotenv(find_dotenv())
-REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
-
-
 icons = {"assistant": "./Snowflake_Logomark_blue.svg", "user": "⛷️"}
 
 # App title
@@ -18,7 +13,7 @@ st.set_page_config(page_title="Snowflake Arctic")
 # Replicate Credentials
 with st.sidebar:
     st.title('Snowflake Arctic')
-    replicate_api = REPLICATE_API_TOKEN
+    replicate_api = "Put_api_key"
 
     os.environ['REPLICATE_API_TOKEN'] = replicate_api
     st.subheader("Adjust model parameters")
@@ -88,4 +83,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
         full_response = st.write_stream(response)
     message = {"role": "assistant", "content": full_response}
     st.session_state.messages.append(message)
+
+
+
 
