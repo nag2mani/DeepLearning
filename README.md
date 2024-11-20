@@ -1,24 +1,4 @@
-# GenerativeAI
+# DeepLearning Repository
 
-Welcome to the GenerativeAI GitHub repository! This project showcases various applications of Generative AI using popular frameworks and libraries.
-
-
-## Repository Structure
-
-1. Snowflake Arctic Model
-
-2. Streamlit Tutorials
-
-3. LangChain Tutorials
-
-4. Other Models..
-
-
-## Getting Started
-
-To get started with this repository, you can clone it to your local machine using the following command:
-
-```bash
-git clone https://github.com/nag2mani/GenerativeAI.git
-```
+Welcome to the **DeepLearning** repository! This repository contains projects and experiments in the field of deep learning, focusing on the practical applications of state-of-the-art models and techniques.
 
